@@ -1,153 +1,194 @@
-    * {
-        margin: 0px;
-        padding: 0px;
-    }
+:root {
+    --BlackorWhite: white;
+    --whiteOrBlack: black;
+    --midgardDarkBrown: #392617;
+    --midgardBrown: #7A4614;
+    --midgardOrage: #C56C18;
+    --midgardBrightOrange: #F08B19;
+    --midgardBrighterOrange: #F4B87A;
+    --midgardGreen: #214001;
+    --Background1: rgba(245, 243, 242, 0.998);
+    --Background2: rgb(47, 47, 47);
+}
 
-    @font-face {
-        font-family: isocpeur;
-        src: url(https://bigfontsite.com/fonts/isocpeur.html);
-        font-style: normal;
-    }
+img {
+    width: 28px;
+    height: 28px;
+}
 
-    body {
-        background-color: rgba(245, 243, 242, 0.998);
-    }
+@font-face {
+    font-family: isocpeur;
+    font-style: normal;
+    src: "../assets/ISOCPEUR.tff";
+}
 
-    .flexnav {
-        font-family: isocpeur;
-        border-radius: 10px;
-        display: flex;
-        background-color: rgba(201, 200, 200, 0.52);
-        width: fit-content;
-        position: sticky;
-        top: 5px;
-        margin-left: 10%;
-        margin-top: 10px;
-        /* height: fit-content;
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: var(--Background1);
+}
+
+.flexnav {
+    justify-content: space-between;
+    font-family: isocpeur;
+    border-bottom: 0.5px;
+    border-color: var(--whiteOrBlack);
+    border-bottom-style: solid;
+    display: flex;
     align-items: center;
-    justify-content: space-between; */
-    }
+    position: sticky;
+    top: 5px;
+    margin: auto 10% auto 10%;
 
-    .flexnav>h1 {
-        border-radius: 10px;
-        background-color: rgb(5, 107, 10);
-        color: rgba(247, 240, 236, 0.998);
-        padding-left: 8px;
-        padding-right: 8px;
-        margin: 5px;
-        margin-right: 200px;
-        /* margin-left: 5px;
-    margin-top: 4px;
-    margin-bottom: 4px; */
-    }
+}
 
-    /* .flexnave:first-child {
-    margin-left: 5px;} */
-    .flexnave {
-        border-radius: 10px;
-        background-color: rgb(0, 0, 0);
-        text-decoration: none;
-        color: rgba(247, 240, 236, 0.998);
-        padding-left: 20px;
-        padding-right: 20px;
-        margin: 5px;
-        margin-left: 2.5px;
-        /* margin-right: 5px;
-    margin-top: 4px;
-    margin-bottom: 4px;*/
-    }
+.navbox>h3 {
+    background-color: var(--Background1);
+    color: var(--midgardGreen);
+    padding-left: 8px;
+    padding-right: 8px;
+    margin: 5px;
+}
 
-    .flexnave:hover {
-        background-color: rgb(220, 120, 77);
-    }
+.navbox,
+.flexnavs>h3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
+.flexnavs {
+    font-family: isocpeur;
+    border-radius: 10px;
+    background-color: var(--Background1);
+    text-decoration: none;
+    color: var(--midgardDarkBrown);
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 5px;
+    margin-left: 2.5px;
+}
 
-    footer,
-    main {
-        margin: 25px;
-        margin-left: 10%;
-        margin-right: 20%;
-    }
+.flexnavs:hover {
+    color: var(--midgardOrage);
+}
 
-    #Recherche {
+footer,
+main,
+form {
+    margin: 25px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
 
-        width: 300px;
-        height: 20px;
-        padding: 10px;
-        box-shadow: 0px 0.2px 0px rgb(5, 107, 10);
-        border: none;
-        font-size: 18px;
-        margin-bottom: 30px;
-        transition: all 0.3s ease-in-out;
-        background-color: rgba(245, 243, 242, 0.998);
-    }
+/*style listbox modifié https://stackoverflow.com/questions/68666010/styling-is-not-working-on-option-of-datalist*/
 
-    #Recherche:active {
-        transform: scale(0.95);
-    }
+#rechercheProjet {
+    width: 300px;
+    height: 20px;
+    padding: 2px;
+    box-shadow: 0px 0.2px 0px var(--midgardGreen);
+    border: none;
+    font-size: 15px;
+    transition: all 0.2s ease-in-out;
+    background-color: var(--Background1);
+}
 
-    #grid {
-        padding-top: 50px;
-        display: grid;
-        grid-template-columns: 70% 30%;
-        grid-template-rows: 100px 200px auto auto;
-    }
+#rechercheProjet:active {
+    transform: scale(0.98);
 
-    #Recherche {
-        grid-column: 1 / 3;
-    }
+}
 
-    #Projets1 {
-        grid-column: 1 / 2;
-        grid-row: 2 / 3;
-        height: fit-content;
+#rechercheProjet:focus {
+    border-color: none;
+    outline: none;
+}
 
-    }
+#listeProjets {
+    max-height: 120px;
+    overflow-x: hidden;
+    /* définir les mécanismes à utiliser (rognage, ascenseurs, dépassement, etc.) lorsque le contenu dépasse des bords droit*/
+    overflow-y: auto;
+    position: absolute;
+    width: 300px;
+    padding: 5px;
+    margin-top: 5px;
+}
 
-    th {
-        border-bottom: 1px solid;
-    }
+#listeProjets option {
+    font-size: 13px;
+    background-color: var(--Background1);
+    padding: 2px;
+    color: var(--midgardDarkBrown);
+}
 
-    #Entete {
-        width: 110px;
-    }
+#listeProjets option:hover { /* pour utilisation avec navigation flèches ultérieusement */
+    color: var(--BlackorWhite);
+    background-color: var(--midgardBrightOrange);
+}
 
-    /* th:first-of-type,
+/*style listbox modifié https://stackoverflow.com/questions/68666010/styling-is-not-working-on-option-of-datalist*/
+
+#grid {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: auto;
+}
+
+#Projets1 {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    height: fit-content;
+
+}
+
+th {
+    border-bottom: 1px solid;
+}
+
+#Entete {
+    width: 110px;
+}
+
+/* th:first-of-type,
     td:first-of-type {
       width: 500px;
     } */
 
-    #Projets2 {
-        grid-column: 2 / 3;
-        grid-row: 2 / 3;
+#Projets2 {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
 
-        /* background-color: green; */
+    /* background-color: green; */
 
-    }
+}
 
-    #infoProjets {
-        margin-right: 0%;
-        width: 100%;
-    }
+#infoProjets {
+    margin-right: 0%;
+    width: 100%;
+}
 
-    .Boutton {
-        width: 49%;
-        height: 20px;
-    }
+.Boutton {
+    width: 49%;
+    height: 20px;
+}
 
-    #Tache1 {
-        grid-column: 1 / 3;
-        grid-row: 3 / 4;
-        height: fit-content;
-    }
+#Tache1 {
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+    height: fit-content;
+}
 
-    #thdescriptif {
-        width: 300px;
-    }
+#thdescriptif {
+    width: 300px;
+}
 
 
-    #Tache2 {
-        grid-column: 2 / 3;
-        grid-row: 3 / 4;
+#Tache2 {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
 
-    }
+}
