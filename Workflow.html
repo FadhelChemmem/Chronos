@@ -16,11 +16,15 @@
       </div>
       <!-- Lien pas encore affecté -->
       <div class="navbox">
-        <a href="./flex.html" class="flexnavs"><h3>Dashboard</h3></a>
-        <a href="./flex.html" class="flexnavs"><h3>Projets</h3></a>
-        <a href="./flex.html" class="flexnavs"><h3>Workflow</h3></a>
-        <a href="./flex.html" class="flexnavs"><h3>Stats</h3></a>
-        <a href="./GRIDGMC.html" class="flexnavs"><h3>GRID-GMC</h3></a>
+        <a href="./Dashboard.html" class="flexnavs"><h3>Dashboard</h3></a>
+        <a href="./Workflow.html" class="flexnavs"><h3>Workflow</h3></a>
+        <a href="./Daily.html" class="flexnavs"><h3>Daily</h3></a>
+        <a href="./index.html" class="flexnavs deconnexion"
+          ><img
+            src="./assets/deconnexion.png"
+            onmouseover="this.src='./assets/deconnexion1.png';"
+            onmouseout="this.src='./assets/deconnexion.png';"
+        /></a>
       </div>
     </div>
 
@@ -39,13 +43,18 @@
       </datalist>
     </form>
     <div class="entete">
-      <h5>Projet</h5>
-      <div>
-        <button name="Nvprojet" class="Boutton">+</button>
-        <button name="NvprojetApply" class="Boutton">Appliquer</button>
+      <h3>Projet</h3>
+      <div class="sousEntete">
+        <button name="nvProjet" class="bouton"><img src="./assets/plus.png" alt="+" /></button>
+        <button name="nvProjetAppliquer" class="bouton">
+          <img src="./assets/appliquer.png" alt="V" />
+        </button>
+        <button name="projetModifier" class="bouton">
+          <img src="./assets/modifier.png" alt="M" />
+        </button>
       </div>
     </div>
-    <main id="grid">
+    <section id="grid1">
       <table id="Projets1">
         <tr>
           <td>Code</td>
@@ -101,15 +110,21 @@
           </tr>
         </table>
       </div>
-
+    </section>
+    <div class="entete">
+      <h3>Workflow</h3>
+      <div class="sousEntete">
+        <button name="nvProjet" class="bouton">+</button>
+        <button name="nvProjetAppliquer" class="bouton">
+          <img src="./assets/appliquer.png" alt="v" />
+        </button>
+        <button name="projetModifier" class="bouton">
+          <img src="./assets/modifier.png" alt="v" />
+        </button>
+      </div>
+    </div>
+    <section id="grid2">
       <table id="Tache1">
-        <tr>
-          <th style="width: 10%">Tâche</th>
-          <th style="width: 10%"></th>
-          <th style="width: 50%"></th>
-          <th style="width: 130px"></th>
-          <th style="width: 130px"></th>
-        </tr>
         <tr>
           <td>Début</td>
           <td>Echéance</td>
@@ -150,12 +165,7 @@
           </td>
         </tr>
       </table>
-      <div id="Tache2">
-        <button name="Nvprojet" class="Boutton">+</button>
-
-        <button name="NvprojetApply" class="Boutton">Appliquer</button>
-      </div>
-    </main>
+    </section>
     <footer>
       <hr />
       <p>Connecté en tant que</p>
