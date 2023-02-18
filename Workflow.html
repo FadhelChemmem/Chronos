@@ -37,6 +37,7 @@
         id="rechercheProjet"
         name="rechercheProjet"
         placeholder="Entrez le nom du projet"
+        autofocus
       />
       <datalist id="listeProjets" role="listbox">
         <!-- la liste des projets se charge ici -->
@@ -45,7 +46,9 @@
     <div class="entete">
       <h3>Projet</h3>
       <div class="sousEntete">
-        <button name="nvProjet" class="bouton"><img src="./assets/plus.png" alt="+" /></button>
+        <button name="nvProjet" class="bouton">
+          <img src="./assets/plus.png" alt="+" />
+        </button>
         <button name="nvProjetAppliquer" class="bouton">
           <img src="./assets/appliquer.png" alt="V" />
         </button>
@@ -58,68 +61,129 @@
       <table id="Projets1">
         <tr>
           <td>Code</td>
-          <td>......</td>
+          <td>
+            <p></p>
+            <input
+              type="text"
+              id="idProjet"
+              class="proprietesProjet"
+              hidden
+              value="23001X"
+            />
+          </td>
         </tr>
         <tr>
           <td>Nom du projet</td>
-          <td>......</td>
+          <td>
+            <p></p>
+            <input
+              type="text"
+              id="nomProjet"
+              class="proprietesProjet"
+              hidden
+              value="Projet test"
+            />
+          </td>
         </tr>
         <tr>
           <td>Date début</td>
-          <td>......</td>
+          <td>
+            <p></p>
+            <input
+              type="date"
+              id="dateDebutProjet"
+              class="proprietesProjet"
+              hidden
+              value="2014-02-09"
+            />
+          </td>
         </tr>
         <tr>
           <td>Date fin</td>
-          <td>......</td>
+          <td>
+            <p></p>
+            <input
+              type="date"
+              id="dateFinProjet"
+              class="proprietesProjet"
+              hidden
+              value="2023-02-09"
+            />
+          </td>
         </tr>
         <tr>
           <td>Phase</td>
-          <td>......</td>
+          <td>
+            <p></p>
+            <select class="proprietesProjet" id="phaseProjet" hidden>
+              <option value="APS">APS</option>
+              <option value="APD">APD</option>
+              <option value="DCE">DCE</option>
+              <option value="EXE">EXE</option>
+            </select>
+          </td>
         </tr>
         <tr>
           <td>Lot</td>
-          <td>......</td>
+          <td>
+            <p></p>
+            <select class="proprietesProjet" hidden id="lotProjet">
+              <option value="GO">GO</option>
+              <option value="CM">CM</option>
+              <option value="CM&GO">CM&GO</option>
+            </select>
+          </td>
         </tr>
-        <tr>
-          <td>Etat</td>
-          <td>......</td>
-        </tr>
+
+        <!-- à ajouter phase précédente -->
       </table>
 
       <div id="Projets2">
         <table id="infoProjets">
           <tr>
-            <th style="width: 50%"></th>
-            <th style="width: 50%"></th>
+            <td>Etat</td>
+            <td>
+              <p></p>
+              <select class="proprietesProjet" id="etatProjet">
+                <option value="En cours">En cours</option>
+                <option value="Terminé">Terminé</option>
+                <option value="Abandonné">Abandonné</option>
+              </select>
+            </td>
           </tr>
           <tr>
-            <td>Chargé</td>
-            <td>......</td>
+            <td>Chargé du projet</td>
+            <td>
+              <p></p>
+              <select class="proprietesProjet" id="chargéDuProjet" hidden>
+                <!-- liste chargé -->
+              </select>
+            </td>
           </tr>
           <tr>
-            <td>Heures</td>
-            <td>......</td>
+            <td>Heures ING</td>
+            <td>0</td>
           </tr>
           <tr>
-            <td>Techniciens</td>
-            <td>......</td>
-          </tr>
-          <tr>
-            <td>Heures</td>
-            <td>......</td>
+            <td>Heures Tech</td>
+            <td>0</td>
           </tr>
         </table>
       </div>
+      <div id="Projets3"><p>information</p>
+      <textarea name="" id="" cols="90" rows="10"></textarea></div>
     </section>
     <div class="entete">
       <h3>Workflow</h3>
       <div class="sousEntete">
-        <button name="nvProjet" class="bouton">+</button>
+        <button name="nvProjet" class="bouton">
+          <img src="./assets/plus.png" alt="+" />
+        </button>
         <button name="nvProjetAppliquer" class="bouton">
-          <img src="./assets/appliquer.png" alt="v" />
+          <img src="./assets/appliquer.png" alt="V" />
         </button>
         <button name="projetModifier" class="bouton">
-          <img src="./assets/modifier.png" alt="v" />
+          <img src="./assets/modifier.png" alt="M" />
         </button>
       </div>
     </div>
