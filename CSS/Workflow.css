@@ -43,7 +43,6 @@ body {
     position: sticky;
     top: 5px;
     margin: auto 10% auto 10%;
-
 }
 
 .navbox>h3 {
@@ -132,6 +131,7 @@ section {
     width: 300px;
     padding: 5px;
     margin-top: 5px;
+    z-index: 10;
 }
 
 #listeProjets option {
