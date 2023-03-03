@@ -5,9 +5,9 @@ fetch("../Script/dataP.json")
   .then(function (res) {
     return res.json();
   })
-  .then(function (listeNomProjets) {
+  .then(function (projetsData) {
     //charger la liste des projets dans la liste déroulante
-    for (var e of listeNomProjets) {
+    for (var e of projetsData) {
       var nvProjet = document.createElement("option");
       nvProjet.text = e.designation;
       listeProjets.appendChild(nvProjet);
@@ -21,6 +21,7 @@ fetch("../Script/dataP.json")
       option.onclick = function (event) {
         rechercheProjet.value = option.value;
         listeProjets.style.display = "none";
+        remplissageInfoProjet(option.value);
       };
     }
     //appui hors du champ de recherche pour masquer la liste
@@ -44,5 +45,12 @@ fetch("../Script/dataP.json")
         listeProjets.style.display = "none";
       }
     };
-    
+    function remplissageInfoProjet(el) {
+      for (var e of projetsData) {
+        if (e.designation == el) {
+
+          console.log(e.code);
+        }
+      }
+    }
   });
