@@ -46,14 +46,14 @@
     <div class="entete">
       <h3>Projet</h3>
       <div class="sousEntete">
-        <button name="nvProjet" class="bouton">
+        <button id="nvProjet" class="bouton">
           <img src="./assets/plus.png" alt="+" />
         </button>
-        <button name="nvProjetAppliquer" class="bouton">
+        <button id="nvProjetAppliquer" class="bouton">
           <img src="./assets/appliquer.png" alt="V" />
         </button>
-        <button name="projetModifier" class="bouton">
-          <img src="./assets/modifier.png" alt="M" />
+        <button id="projetAnnuler" class="bouton">
+          <img src="./assets/supprimer.png" alt="S" />
         </button>
       </div>
     </div>
@@ -68,7 +68,7 @@
               id="idProjet"
               class="proprietesProjet"
               hidden
-              value="23001X"
+              value="23"
             />
           </td>
         </tr>
@@ -81,7 +81,7 @@
               id="nomProjet"
               class="proprietesProjet"
               hidden
-              value="Projet test"
+              value="Nouveau Projet"
             />
           </td>
         </tr>
@@ -116,7 +116,7 @@
           <td>
             <p></p>
             <select class="proprietesProjet" id="phaseProjet" hidden>
-              <option value="APS">APS</option>
+              <!-- <option value="APS">APS</option> -->
               <option value="APD">APD</option>
               <option value="DCE">DCE</option>
               <option value="EXE">EXE</option>
@@ -134,29 +134,28 @@
             </select>
           </td>
         </tr>
-
+        <tr>
+          <td>Etat</td>
+          <td>
+            <p></p>
+            <select class="proprietesProjet" id="etatProjet" hidden>
+              <option value="En cours">En cours</option>
+              <option value="Terminé">Terminé</option>
+              <option value="Abandonné">Abandonné</option>
+            </select>
+          </td>
+        </tr>
         <!-- à ajouter phase précédente -->
       </table>
 
-      <div id="Projets2">
+      <!-- <div id="Projets2">
         <table id="infoProjets">
-          <tr>
-            <td>Etat</td>
-            <td>
-              <p></p>
-              <select class="proprietesProjet" id="etatProjet" hidden>
-                <option value="En cours">En cours</option>
-                <option value="Terminé">Terminé</option>
-                <option value="Abandonné">Abandonné</option>
-              </select>
-            </td>
-          </tr>
           <tr>
             <td>Chargé du projet</td>
             <td>
               <p></p>
               <select class="proprietesProjet" id="chargéDuProjet" hidden>
-                <!-- liste chargé -->
+                 liste chargé 
               </select>
             </td>
           </tr>
@@ -168,14 +167,15 @@
             <td>Heures Tech</td>
             <td>0</td>
           </tr>
+          </tr>
         </table>
-      </div>
-      <div id="Projets3">
+      </div> -->
+      <!-- <div id="Projets3">
         <p>information</p>
-        <textarea name="" id="" cols="90" rows="10"></textarea>
-      </div>
+        <textarea name="" id="informationProjet" cols="90" rows="10"></textarea>
+      </div> -->
     </section>
-    <div class="entete">
+    <!-- <div class="entete">
       <h3>Workflow</h3>
       <div class="sousEntete">
         <button name="nvProjet" class="bouton">
@@ -231,7 +231,7 @@
           </td>
         </tr>
       </table>
-    </section>
+    </section> -->
     <footer>
       <hr />
       <p>Connecté en tant que</p>
